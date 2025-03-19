@@ -1,13 +1,7 @@
-// import React from "react";
+import React from "react";
 
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
+function App() {
+  return <h1>ds</h1>;
+}
 
-// export default App;
+export default App;
