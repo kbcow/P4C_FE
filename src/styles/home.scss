@@ -1,11 +1,27 @@
-body {
-  background-color: #f0dddf;
-}
-
 .home-container {
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  height: 100vh; /* 화면 전체 높이 */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-color: #f0dddf;
+  gap: 60px;
+}
+
+.image-side {
+  position: relative;
+}
+
+.frame-container {
+  display: flex;
+  gap: 50px;
+}
+
+.leftframe {
+  width: 350px;
+  height: auto;
+}
+.rightframe {
+  width: 300px;
+  height: auto;
+  transform: rotate(7deg);
 }
