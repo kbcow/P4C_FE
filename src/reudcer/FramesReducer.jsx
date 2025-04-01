@@ -1,20 +1,30 @@
-export const SELECTED_DOT = "SELECTED_DOT";
+const SELECTED_DOT = "SELECTED_DOT";
+const SELECTED_EFFECT = "SELECTED_EFFECT";
 
+export const setSelectedDot = (dot) => ({ type: SELECTED_DOT, payload: dot });
+export const setSelectedEffect = (effect) => ({
+  type: SELECTED_EFFECT,
+  payload: effect,
+});
+console.log("setSelectedDot", setSelectedDot);
 export const initialState = {
-  selectedWhite: false,
-  selectedBlack: false,
-  selectedGray: false,
-  selectedGreen: false,
-  selectedPink: false,
-  selectedRainbow: false,
-  selectedSky: false,
-  selectedYellow: false,
+  selectedDot: "selectedBlack",
+  selectedEffect: "selectedRainbow",
 };
 
 export function framesReducer(state = initialState, action) {
+  console.log("action", action);
   switch (action.type) {
     case SELECTED_DOT:
-      return Object.fromEntries(Object.keys(state).map((key) => [key, key === action.payload]));
+      return {
+        ...state,
+        selectedDot: action.payload,
+      };
+    case SELECTED_EFFECT:
+      return {
+        ...state,
+        selectedEffect: action.payload,
+      };
     default:
       return state;
   }
